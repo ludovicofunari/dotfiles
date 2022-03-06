@@ -108,12 +108,12 @@ fi
 
 ## LUDO
 ## Kubernetes
-source <(kubectl completion zsh)
-alias k=kubectl
-compdef __start_kubectl k
+#source <(kubectl completion zsh)
+#alias k=kubectl
+#compdef __start_kubectl k
 
 ## Helm
-source <(helm completion zsh)
+#source <(helm completion zsh)
 
 ## Vagrant command completion (start)
 # fpath=(/opt/vagrant/embedded/gems/2.2.19/gems/vagrant-2.2.19/contrib/zsh/ $fpath)
