@@ -129,4 +129,6 @@ fi
 LC_CTYPE=en_US.UTF-8
 LC_ALL=en_US.UTF-8
 
+helm completion zsh > "${fpath[1]}/_helm"
+
 source ~/.zshrc_aliases
