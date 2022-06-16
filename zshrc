@@ -125,4 +125,8 @@ fi
 # To customize prompt, run `p10k configure` or edit ~/dotfiles/p10k.zsh.
 [[ ! -f ~/dotfiles/p10k.zsh ]] || source ~/dotfiles/p10k.zsh
 
+# remove "perl: warning..."
+LC_CTYPE=en_US.UTF-8
+LC_ALL=en_US.UTF-8
+
 source ~/.zshrc_aliases
