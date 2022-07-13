@@ -6,6 +6,7 @@ sh makesymlinks.sh
 ```
 
 
+//TODO: prompt users w `Y/N`
 
 ```bash
 git clone --bare git@github.com:ludfun/dotfiles.git $HOME/.dotfiles

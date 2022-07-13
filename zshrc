@@ -85,6 +85,8 @@ plugins=(
   git
   zsh-autosuggestions
   zsh-syntax-highlighting
+  docker 
+  docker-compose
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -126,3 +128,4 @@ fi
 [[ ! -f ~/dotfiles/p10k.zsh ]] || source ~/dotfiles/p10k.zsh
 
 source ~/.zshrc_aliases
+export PATH="/opt/homebrew/opt/python@3.10/bin:$PATH"
