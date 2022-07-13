@@ -46,8 +46,18 @@ alias ku="kubectl config use-context"
 
 export do="--dry-run=client -o yaml"
 export gf="--grace-period=0 --force"
-export ks="kubectl -n kube-system"
+
+alias ks="kubectl -n kube-system"
+alias km="kubectl -n monitoring"
+alias kerr="kubectl get pods --field-selector=status.phase!=Running --all-namespaces"
+
+alias kerr="kubectl get pods --field-selector=status.phase!=Running --all-namespaces"
 
 alias deltesk="kubectl delete jobs --all; kubectl get pvc -n default --no-headers=true -o=custom-columns='NAME:.metadata.name' | awk '/task-/{print $1}'| xargs  kubectl delete -n default pvc" 
 alias kkill="kubectl delete --grace-period=0 --force"
 
+## gobench setup
+alias db="docker-compose build"
+alias dp="docker-compose push"
+alias dbp="db && dp"
+alias gos0="GOBENCH_ID="gobench-s0" GOBENCH_PORT="8080" GOBENCH_WORKMODEL="/kubedata/workmodel.json" go run ."
