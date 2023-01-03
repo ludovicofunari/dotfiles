@@ -5,6 +5,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+[[ "$TERM_PROGRAM" == "vscode" ]] && . "$(code --locate-shell-integration-path zsh)"
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -132,6 +134,8 @@ LC_CTYPE=en_US.UTF-8
 LC_ALL=en_US.UTF-8
 
 helm completion zsh > "${fpath[1]}/_helm"
+
+source <(kind completion zsh)
 
 source ~/.zshrc_aliases
 export PATH="/opt/homebrew/opt/python@3.10/bin:$PATH"
